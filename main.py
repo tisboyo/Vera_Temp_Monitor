@@ -59,6 +59,7 @@ def ssh_connect(
 
 
 ssh = ssh_connect()
+print(f"Connected to {env['machine']}. Waiting for updates.")
 
 stdin, stdout, stderr = ssh.exec_command("tail -f /var/log/cmh/LuaUPnP.log")
 
