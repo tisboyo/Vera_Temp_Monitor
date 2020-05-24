@@ -92,7 +92,8 @@ for line in stdout:
 
             time = datetime.datetime.strptime(
                 f"{data[1]} {data[2]}", "%m/%d/%y %H:%M:%S.%f"
-            )
+            ) + datetime.timedelta(hours=4)
+
             tank = "House"
             sensor = "temperature"
             value = current_temp
